@@ -21,7 +21,7 @@ webcam.start()
 });
 
 webcam.addEventListener('play', () =>{
-  const canvas = faceapi.createCanvasFromMedia(webcam)document.body(canvas)
+  const canvas = faceapi.createCanvasFromMedia(webcam).document.body(canvas)
   const displaySize = {width: webcam.width, height: webcam.height}
   setInterval(async () =>{
     const detections = await faceapi.detectAllFaces(webcam,
